@@ -1,2 +1,3 @@
-import './style.scss'
-console.log("Success!!!");
+import "./css/style.scss";
+
+document.body.innerHTML="<div id='content'></div>";

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/palmerusaf/restaurant-page#readme",
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
