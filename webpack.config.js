@@ -22,7 +22,7 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Restaurant Page",
+      title: "The Landmark",
     }),
   ],
   output: {
