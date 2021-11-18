@@ -15,6 +15,10 @@ document.body.innerHTML = "<div id='content'></div>";
 
   function buildListOfNavItems(){
       const list=document.createElement('ul')
-      list.appendChild
+      list.appendChild(buildNavItem("Home"))
+      list.appendChild(buildNavItem("Menu"))
+      list.appendChild(buildNavItem("Contact"))
+      return list;
   }
+
 })();
