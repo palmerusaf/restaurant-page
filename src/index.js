@@ -1,7 +1,10 @@
 import "./css/style.scss";
+import * as homeContent from "./home";
+import * as menuContent from "./menu";
+import * as contactContent from "./contact";
 
 // Build navBar
-(() => {
+
   document.body.appendChild(buildNavBar());
   document.body.appendChild(buildContentContainer());
 
@@ -53,4 +56,25 @@ import "./css/style.scss";
     const contentContainer = document.getElementById("content");
     contentContainer.textContent = "";
   }
-})();
+
+  function addContentBasedNavButtonSelected(navButton) {
+    const buttonText = navButton.textContent.toLowerCase();
+    const contentContainer = document.getElementById("content");
+    switch (buttonText) {
+      case "home":
+        homeContent.attachToContainer(contentContainer);
+        break;
+      case "menu":
+        menuContent.attachToContainer(contentContainer);
+        break;
+      case "contact":
+        contactContent.attachToContainer(contentContainer);
+        break;
+
+      default:
+        console.log(
+          "ERROR: no content module available for " + buttonText + "button."
+        );
+        break;
+    }
+  }
