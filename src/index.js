@@ -35,13 +35,22 @@ import "./css/style.scss";
     item.addEventListener("click", handleNavButtonClick);
     return item;
   }
+
   function handleNavButtonClick(event) {
     const navButton = event.target;
     switchActiveNavButton(navButton);
+    removeAllContent();
+    addContentBasedNavButtonSelected(navButton);
   }
+
   function switchActiveNavButton(button) {
     const oldActiveButton = document.querySelector(".nav-bar__item--active");
     oldActiveButton.classList.remove("nav-bar__item--active");
     button.classList.add("nav-bar__item--active");
+  }
+
+  function removeAllContent() {
+    const contentContainer = document.getElementById("content");
+    contentContainer.textContent = "";
   }
 })();
