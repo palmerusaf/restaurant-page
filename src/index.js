@@ -10,23 +10,34 @@ document.body.innerHTML = "<div id='content' class='flex-col'></div>";
   function buildNavBar() {
     const navBar = document.createElement("nav");
     navBar.classList = "flex nav-bar";
-    navBar.appendChild(buildListOfNavItems());
+    navBar.appendChild(buildListOfNavButtons());
     return navBar;
   }
 
-  function buildListOfNavItems() {
+  function buildListOfNavButtons() {
     const list = document.createElement("ul");
-    list.appendChild(buildNavItem("Home"));
-    list.appendChild(buildNavItem("Menu"));
-    list.appendChild(buildNavItem("Contact"));
+    list.appendChild(buildNavButton("Home"));
+    list.appendChild(buildNavButton("Menu"));
+    list.appendChild(buildNavButton("Contact"));
     return list;
   }
 
-  function buildNavItem(text) {
+  function buildNavButton(text) {
     const item = document.createElement("li");
     item.classList = "nav-bar__item";
+    if (text === "Home") item.classList.add("nav-bar__item--active");
     item.textContent = text;
-    item.addEventListener("click",(e)=>console.log(e));
+    item.addEventListener("click", handleNavButtonClick);
     return item;
+  }
+  function handleNavButtonClick(event) {
+    const navButton = event.target;
+    switchActiveNavButton(navButton);
+    console.log(navButton);
+  }
+  function switchActiveNavButton(button) {
+    const oldActiveButton = document.querySelector(".nav-bar__item--active");
+    oldActiveButton.classList.remove("nav-bar__item--active");
+    button.classList.add("nav-bar__item--active");
   }
 })();
