@@ -1,11 +1,16 @@
 import "./css/style.scss";
 
-document.body.classList = "flex-col";
-document.body.innerHTML = "<div id='content' class='flex-col'></div>";
-
 // Build navBar
 (() => {
-  document.getElementById("content").appendChild(buildNavBar());
+  document.body.appendChild(buildNavBar());
+  document.body.appendChild(buildContentContainer());
+
+  function buildContentContainer() {
+    const container = document.createElement("div");
+    container.classList = "flex-col";
+    container.id = "content";
+    return container;
+  }
 
   function buildNavBar() {
     const navBar = document.createElement("nav");
@@ -33,7 +38,6 @@ document.body.innerHTML = "<div id='content' class='flex-col'></div>";
   function handleNavButtonClick(event) {
     const navButton = event.target;
     switchActiveNavButton(navButton);
-    console.log(navButton);
   }
   function switchActiveNavButton(button) {
     const oldActiveButton = document.querySelector(".nav-bar__item--active");
