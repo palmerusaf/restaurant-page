@@ -1,5 +1,6 @@
 import "./css/style.scss";
 
+document.body.classList = "flex-col";
 document.body.innerHTML = "<div id='content'></div>";
 
 // Build navBar
