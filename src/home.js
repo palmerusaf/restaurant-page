@@ -2,11 +2,11 @@ const attachToContainer = function (container) {
   container.appendChild(buildTitle());
   container.appendChild(buildWelcomeMsg());
   container.appendChild(buildHourInfo());
-  // container.appendChild(buildLocationInfo());
+  container.appendChild(buildLocationInfo());
 };
 
 function buildTitle() {
-  const title = document.createElement("div");
+  const title = document.createElement("h1");
   title.classList = "home__title";
   title.textContent = "Home Title";
   return title;
@@ -44,6 +44,19 @@ function buildHourInfo() {
     span.textContent = content;
     return span;
   }
+}
+
+function buildLocationInfo() {
+  const container = document.createElement("div");
+  container.classList = "flex-col location";
+  const title = document.createElement("h2");
+  title.classList = "location__title";
+  title.textContent = "Location";
+  container.appendChild(title);
+  const address = document.createElement("address");
+  address.innerHTML = "1234 Fake Street<br>Fake City, NA 1234<br>USSAR";
+  container.appendChild(address);
+  return container;
 }
 
 export { attachToContainer };
