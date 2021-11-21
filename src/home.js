@@ -1,8 +1,8 @@
 const attachToContainer = function (container) {
   container.appendChild(buildTitle());
-  container.appendChild(buildWelcomeMsg());
-  container.appendChild(buildHourInfo());
-  container.appendChild(buildLocationInfo());
+  // container.appendChild(buildWelcomeMsg());
+  // container.appendChild(buildHourInfo());
+  // container.appendChild(buildLocationInfo());
 };
 
 function buildTitle() {

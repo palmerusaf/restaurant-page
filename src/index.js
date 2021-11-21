@@ -3,8 +3,7 @@ import * as homeContent from "./home";
 import * as menuContent from "./menu";
 import * as contactContent from "./contact";
 
-// Build navBar
-
+//initialize the page
   document.body.appendChild(buildNavBar());
   document.body.appendChild(buildContentContainer());
 
@@ -12,6 +11,7 @@ import * as contactContent from "./contact";
     const container = document.createElement("div");
     container.classList = "flex-col";
     container.id = "content";
+    homeContent.attachToContainer(container)
     return container;
   }
 
