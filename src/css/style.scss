@@ -20,8 +20,8 @@
   font-family: sans-serif;
 }
 
-body{
-    background-color: #fffeea;
+body {
+  background-color: #fffeea;
 }
 
 .flex-row {
@@ -45,16 +45,43 @@ body{
     cursor: pointer;
     &--active,
     &:hover {
-        transition: .1s;
-        transform: scale(1.4);
-        text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);    }
+      transition: 0.1s;
+      transform: scale(1.4);
+      text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+    }
   }
 }
 
 @media only screen and (max-width: 400px) {
-    .nav-bar__item{
-        font-size: 20px;
-        padding: 8px;
-        margin-right: 8px;
-    }
+  .nav-bar__item {
+    font-size: 20px;
+    padding: 8px;
+    margin-right: 8px;
   }
+}
+
+.home__ {
+  &title {
+  }
+
+  &welcome-container {
+  }
+
+  &welcome-msg {
+  }
+  &title-category {
+  }
+}
+
+.hour {
+  &__list {
+  }
+
+  &__list-item {
+  }
+}
+
+.location {
+  &__address {
+  }
+}
