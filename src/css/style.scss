@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "MainTitle";
+  src: url("../fonts/Praise-Regular.ttf");
+}
+@font-face {
+  font-family: "NavAndSmallTitle";
+  src: url("../fonts/ShadowsIntoLight-Regular.ttf");
+}
+@font-face {
+  font-family: "Descriptions";
+  src: url("../fonts/PatrickHand-Regular.ttf");
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -17,16 +30,15 @@
   flex-direction: column;
 }
 
-.nav-bar{
-justify-content: end;
-    &__item{
-margin-right: 16px;
-padding: 16px;
-user-select: none;
-cursor: pointer;
-        &--active{
-
-        }
+.nav-bar {
+  justify-content: end;
+  &__item {
+    font-family: "NavAndSmallTitle";
+    margin-right: 16px;
+    padding: 16px;
+    user-select: none;
+    cursor: pointer;
+    &--active {
     }
-
+  }
 }
