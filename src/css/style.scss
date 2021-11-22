@@ -34,11 +34,15 @@
   justify-content: end;
   &__item {
     font-family: "NavAndSmallTitle";
+    font-size: 25px;
     margin-right: 16px;
     padding: 16px;
     user-select: none;
     cursor: pointer;
-    &--active {
-    }
+    &--active,
+    &:hover {
+        transition: .1s;
+        transform: scale(1.4);
+        text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);    }
   }
 }
