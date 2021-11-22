@@ -11,8 +11,7 @@ import * as contactContent from "./contact";
     const container = document.createElement("div");
     container.classList = "flex-col";
     container.id = "content";
-    // Change back to homeContent before branch merge
-    menuContent.attachToContainer(container)
+    homeContent.attachToContainer(container)
     return container;
   }
 
