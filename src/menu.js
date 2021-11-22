@@ -1,20 +1,11 @@
 import * as menuItems from "./menu-items.json";
 
-// Load all images so json file can use dynamically
+// Load all imgs from img folder so json file can use imgs dynamically
 let imgCache = {};
 function importAll(r) {
   r.keys().forEach((key) => (imgCache[key] = r(key)));
 }
 importAll(require.context("./img/", true, /\.(png|svg|jpg|jpeg|gif)$/i));
-
-// const chickImg = document.createElement("img");
-// chickImg.id="chick"
-
-// chickImg.src = imgCache[menuItems[0].img];
-// document.body.appendChild(chickImg);
-
-
-// console.log(imgCache[menuItems[0].img])
 
 const attachToContainer = function (container) {
   container.appendChild(buildMenu());
@@ -41,23 +32,30 @@ function buildMenuList() {
   menuItems.forEach((item) => {
     itemField.appendChild(buildItemName(item));
     itemField.appendChild(buildItemImage(item));
-    // itemField.appendChild(buildItemDescription(item));
+    itemField.appendChild(buildItemDescription(item));
   });
   return itemField;
 
   function buildItemName(item) {
-    const h2 = document.createElement("h2");
-    h2.classList = "menu__item-name";
-    h2.textContent = item.name;
-    return h2;
+    const menuItemName = document.createElement("h2");
+    menuItemName.classList = "menu__item-name";
+    menuItemName.textContent = item.name;
+    return menuItemName;
   }
 
   function buildItemImage(item) {
-    const img = document.createElement("img");
-    img.classList = "menu__item-img";
-    img.src=imgCache[menuItems[0].img];
-    img.alt = item.altText;
-    return img;
+    const itemImage = document.createElement("img");
+    itemImage.classList = "menu__item-img";
+    itemImage.src = imgCache[menuItems[0].img];
+    itemImage.alt = item.altText;
+    return itemImage;
+  }
+
+  function buildItemDescription(item) {
+    const itemDescription = document.createElement("div");
+    itemDescription.classList = "menu__item-description";
+    itemDescription.textContent = item.description;
+    return itemDescription;
   }
 }
 
