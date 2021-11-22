@@ -1,6 +1,6 @@
-import chickenLogo from "./logos/chicken-logo.png"
-import githubLogo from "./logos/github-logo.png"
-import phoneLogo from "./logos/phone-logo.png"
+import chickenLogo from "./logos/chicken-logo.png";
+import phoneLogo from "./logos/phone-logo.png";
+import githubLogo from "./logos/github-logo.png";
 
 const attachToContainer = function (container) {
   container.appendChild(contactInfoBuilder());
@@ -22,7 +22,23 @@ function contactInfoBuilder() {
   function contactFieldBuilder() {
     const contactField = document.createElement("ul");
     contactField.classList = "flex-col contact__field";
-    contactField.appendChild(contactBuilder(image, content, link));
+    contactField.appendChild(
+      contactBuilder(phoneLogo, "Call us at 1-800-867-5309")
+    );
+    contactField.appendChild(
+      contactBuilder(
+        chickenLogo,
+        "follow us on Clucker @theRealFakeRestaurant",
+        "https://youtu.be/dQw4w9WgXcQ?t=10"
+      )
+    );
+    contactField.appendChild(
+      contactBuilder(
+        githubLogo,
+        "check us out on GitHub",
+        "https://github.com/palmerusaf/restaurant-page"
+      )
+    );
     return contactField;
 
     function contactBuilder(logoSource, content, link) {
@@ -30,8 +46,9 @@ function contactInfoBuilder() {
       contact.classList = "flex contact__item";
 
       if (logoSource) contact.appendChild(logoBuilder(logoSource));
-      if (link) contact.appendChild(linkBuilder(content, link));
-      else contact.textContent = content;
+      link
+        ? contact.appendChild(linkBuilder(content, link))
+        : (contact.innerHTML += content);
       return contact;
 
       function logoBuilder(logoSource) {
