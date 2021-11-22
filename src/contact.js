@@ -16,25 +16,33 @@ function buildContactInfo() {
   }
 
   function buildContactField() {
-    const contactField = document.createElement("div");
+    const contactField = document.createElement("ul");
     contactField.classList = "flex-col contact__field";
-    contactField.appendChild(buildContact(image, content));
+    contactField.appendChild(buildContact(image, content, link));
     return contactField;
 
-    function buildContact(logoSource, content) {
-      const contact = document.createElement("span");
+    function buildContact(logoSource, content, link) {
+      const contact = document.createElement("li");
       contact.classList = "flex contact__item";
 
-      if (logoSource) contact.appendChild(buildLogo());
-      contact.textContent = content;
+      if (logoSource) contact.appendChild(buildLogo(logoSource));
+      if (link) contact.appendChild(buildLink(content, link));
+      else contact.textContent = content;
       return contact;
 
-      function buildLogo() {
+      function buildLogo(logoSource) {
         const logo = document.createElement("img");
         logo.classList = "contact__logo";
         logo.alt = "contact logo";
         logo.src = logoSource;
         return logo;
+      }
+
+      function buildLink(content, link) {
+        const contentLink = document.createElement("a");
+        contentLink.href = link;
+        contentLink.textContent = content;
+        return contentLink;
       }
     }
   }
