@@ -32,13 +32,13 @@ function buildHourInfo() {
 
   function buildList() {
     const listTextContent = [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
+      "Monday - 8:00am-5:00pm",
+      "Tuesday - 8:00am-5:00pm",
+      "Wednesday - 8:00am-5:00pm",
+      "Thursday - 8:00am-5:00pm",
+      "Friday - 8:00am-5:00pm",
+      "Saturday - closed",
+      "Sunday - closed",
     ];
     const list = document.createElement("ul");
     list.classList = "flex-col hour__list";
