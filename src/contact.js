@@ -43,7 +43,7 @@ function contactInfoBuilder() {
 
     function contactBuilder(logoSource, content, link) {
       const contact = document.createElement("li");
-      contact.classList = "flex contact__item";
+      contact.classList = "flex-row contact__item";
 
       if (logoSource) contact.appendChild(logoBuilder(logoSource));
       link
