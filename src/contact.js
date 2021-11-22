@@ -1,36 +1,40 @@
+import chickenLogo from "./logos/chicken-logo.png"
+import githubLogo from "./logos/github-logo.png"
+import phoneLogo from "./logos/phone-logo.png"
+
 const attachToContainer = function (container) {
-  container.appendChild(buildContactInfo());
+  container.appendChild(contactInfoBuilder());
 };
-function buildContactInfo() {
+function contactInfoBuilder() {
   const container = document.createElement("div");
   container.classList = "flex-col contact";
-  container.appendChild(buildTitle());
-  container.appendChild(buildContactField());
+  container.appendChild(titleBuilder());
+  container.appendChild(contactFieldBuilder());
   return container;
 
-  function buildTitle() {
+  function titleBuilder() {
     const title = document.createElement("h1");
     title.classList = "contact__title";
     title.textContent = "Contact Us";
     return title;
   }
 
-  function buildContactField() {
+  function contactFieldBuilder() {
     const contactField = document.createElement("ul");
     contactField.classList = "flex-col contact__field";
-    contactField.appendChild(buildContact(image, content, link));
+    contactField.appendChild(contactBuilder(image, content, link));
     return contactField;
 
-    function buildContact(logoSource, content, link) {
+    function contactBuilder(logoSource, content, link) {
       const contact = document.createElement("li");
       contact.classList = "flex contact__item";
 
-      if (logoSource) contact.appendChild(buildLogo(logoSource));
-      if (link) contact.appendChild(buildLink(content, link));
+      if (logoSource) contact.appendChild(logoBuilder(logoSource));
+      if (link) contact.appendChild(linkBuilder(content, link));
       else contact.textContent = content;
       return contact;
 
-      function buildLogo(logoSource) {
+      function logoBuilder(logoSource) {
         const logo = document.createElement("img");
         logo.classList = "contact__logo";
         logo.alt = "contact logo";
@@ -38,7 +42,7 @@ function buildContactInfo() {
         return logo;
       }
 
-      function buildLink(content, link) {
+      function linkBuilder(content, link) {
         const contentLink = document.createElement("a");
         contentLink.href = link;
         contentLink.textContent = content;
