@@ -46,7 +46,7 @@ function buildMenuList() {
   function buildItemImage(item) {
     const itemImage = document.createElement("img");
     itemImage.classList = "menu__item-img";
-    itemImage.src = imgCache[menuItems[0].img];
+    itemImage.src = imgCache[item.img];
     itemImage.alt = item.altText;
     return itemImage;
   }

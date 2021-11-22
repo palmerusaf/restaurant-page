@@ -4,5 +4,11 @@
     "img": "./chicken.jpg",
     "altText": "pic of chicken",
     "description": "walks on two legs etc..."
+  },
+  {
+    "name": "Jelly Fish",
+    "img": "./jelly-fish.jpg",
+    "altText": "pic of jellyfish",
+    "description": "served with a side of peanuts and butter."
   }
 ]
