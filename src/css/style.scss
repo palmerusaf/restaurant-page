@@ -1,7 +1,17 @@
-*{
-    box-sizing: border-box;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }

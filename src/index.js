@@ -17,13 +17,13 @@ import * as contactContent from "./contact";
 
   function buildNavBar() {
     const navBar = document.createElement("nav");
-    navBar.classList = "flex nav-bar";
     navBar.appendChild(buildListOfNavButtons());
     return navBar;
   }
 
   function buildListOfNavButtons() {
     const list = document.createElement("ul");
+    list.classList = "flex-row nav-bar";
     list.appendChild(buildNavButton("Home"));
     list.appendChild(buildNavButton("Menu"));
     list.appendChild(buildNavButton("Contact"));
