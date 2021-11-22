@@ -65,6 +65,7 @@ function buildLocationInfo() {
 
   function buildAddress() {
     const address = document.createElement("address");
+    address.classList = "location__address";
     address.innerHTML = "1234 Fake Street<br>Fake City, NA 1234<br>USSAR";
     return address;
   }
