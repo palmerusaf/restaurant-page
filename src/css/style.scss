@@ -18,9 +18,12 @@
 }
 
 .nav-bar{
-
+justify-content: end;
     &__item{
-
+margin-right: 16px;
+padding: 16px;
+user-select: none;
+cursor: pointer;
         &--active{
 
         }
