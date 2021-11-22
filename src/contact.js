@@ -21,6 +21,22 @@ function buildContactInfo() {
     contactField.appendChild(buildContact(image, content));
     return contactField;
 
+    function buildContact(logoSource, content) {
+      const contact = document.createElement("span");
+      contact.classList = "flex contact__item";
+
+      if (logoSource) contact.appendChild(buildLogo());
+      contact.textContent = content;
+      return contact;
+
+      function buildLogo() {
+        const logo = document.createElement("img");
+        logo.classList = "contact__logo";
+        logo.alt = "contact logo";
+        logo.src = logoSource;
+        return logo;
+      }
+    }
   }
 }
 export { attachToContainer };
