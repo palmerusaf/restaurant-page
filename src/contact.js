@@ -14,5 +14,13 @@ function buildContactInfo() {
     title.textContent = "Contact Us";
     return title;
   }
+
+  function buildContactField() {
+    const contactField = document.createElement("div");
+    contactField.classList = "flex-col contact__field";
+    contactField.appendChild(buildContact(image, content));
+    return contactField;
+
+  }
 }
 export { attachToContainer };
