@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: sans-serif;
 }
 
 .flex-row {
@@ -14,4 +15,15 @@
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.nav-bar{
+
+    &__item{
+
+        &--active{
+
+        }
+    }
+
 }
