@@ -38,7 +38,7 @@ function buildMenuList() {
 
   function buildItemName(item) {
     const menuItemName = document.createElement("h2");
-    menuItemName.classList = "menu__item-name";
+    menuItemName.classList = "home__title-category menu__item-name";
     menuItemName.textContent = item.name;
     return menuItemName;
   }
