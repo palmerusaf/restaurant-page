@@ -94,14 +94,19 @@ body {
 }
 
 .hour {
-  margin-right: 2em;
-  align-self: end;
-  text-align: center;
+  margin-bottom: 2em;
+  text-align: start;
+  padding-top: 2em;
+  &__title {
+    text-align: center;
   padding-top: 2em;
   &__list {
   }
 
   &__list-item {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
     font-family: "Descriptions";
     font-size: 25px;
   }

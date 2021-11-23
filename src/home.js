@@ -30,19 +30,22 @@ function buildWelcomeMsg() {
 function buildHourInfo() {
   const container = document.createElement("div");
   container.classList = "hour";
-  container.appendChild(buildCategoryTitle("Hours"));
+  const title = buildCategoryTitle("Hours");
+  title.classList.add("hour__title");
+  container.appendChild(title);
   container.appendChild(buildList());
   return container;
 
   function buildList() {
     const listTextContent = [
-      "Monday - 8:00am-5:00pm",
-      "Tuesday - 8:00am-5:00pm",
-      "Wednesday - 8:00am-5:00pm",
-      "Thursday - 8:00am-5:00pm",
-      "Friday - 8:00am-5:00pm",
-      "Saturday - closed",
-      "Sunday - closed",
+      { day: "Monday", hours: "closed" },
+      { day: "Tuesday", hours: "8:00am-5:00pm" },
+      { day: "Wednesday", hours: "8:00am-5:00pm" },
+      { day: "Thursday", hours: "8:00am-5:00pm" },
+      { day: "Friday", hours: "8:00am-5:00pm" },
+      { day: "Saturday", hours: "8:00am-5:00pm" },
+      { day: "Sunday", hours: "8:00am-5:00pm" },
+      { day: "Monday", hours: "closed" },
     ];
     const list = document.createElement("ul");
     list.classList = "flex-col hour__list";
@@ -53,10 +56,15 @@ function buildHourInfo() {
   }
 
   function buildHourItemWithContent(content) {
-    const span = document.createElement("li");
-    span.classList = "hour__list-item";
-    span.textContent = content;
-    return span;
+    const container = document.createElement("li");
+    const day = document.createElement("span");
+    day.textContent = content.day;
+    const hours = document.createElement("span");
+    hours.textContent = content.hours;
+    container.appendChild(day);
+    container.appendChild(hours);
+    container.classList = "flex-row hour__list-item";
+    return container;
   }
 }
 
