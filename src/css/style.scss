@@ -97,16 +97,20 @@ body {
   margin-bottom: 2em;
   text-align: start;
   padding-top: 2em;
+  align-items: center;
   &__title {
-    text-align: center;
-  padding-top: 2em;
+    border: green solid;
+    border-radius: 15px;
+    padding: 0px 8px;
+    margin-bottom: 8px;
+  }
   &__list {
   }
 
   &__list-item {
     width: 100%;
     justify-content: space-between;
-    gap: 8px;
+    gap: 16px;
     font-family: "Descriptions";
     font-size: 25px;
   }
