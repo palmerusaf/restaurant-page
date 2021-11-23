@@ -19,6 +19,7 @@
   list-style: none;
   font-family: sans-serif;
   align-self: center;
+  font-family: "Descriptions";
 }
 
 body {
@@ -77,7 +78,6 @@ body {
   }
 
   &welcome-msg {
-    font-family: "Descriptions";
   }
   &title-category {
     font-family: "NavAndSmallTitle";
@@ -102,7 +102,6 @@ body {
     width: 100%;
     justify-content: space-between;
     gap: 16px;
-    font-family: "Descriptions";
     font-size: 25px;
   }
 }
@@ -114,8 +113,33 @@ body {
   margin-left: 1em;
   align-self: start;
   &__address {
-    font-family: "Descriptions";
     font-size: 25px;
+  }
+}
+
+.menu {
+  &__title {
+    margin-bottom: 0.7em;
+  }
+  &__item- {
+    &field {
+      width: 75%;
+      margin-bottom: 3em;
+      gap: 2em;
+    }
+    &img {
+      width: 500px;
+      height: 281.25px;
+      object-fit: cover;
+      border-radius: 15px;
+      outline: goldenrod solid 2px;
+      box-shadow: inset;
+    }
+    &name {
+      margin: -10px 0px;
+    }
+    &description {
+    }
   }
 }
 
@@ -133,9 +157,42 @@ body {
   .location__address {
     font-size: 16px;
     text-shadow: none;
-    color: black
+    color: black;
   }
   .home__title-category {
     font-size: 25px;
+  }
+  .menu__item- {
+    &img {
+      width: 200px;
+      height: 112.5px;
+    }
+    &name{
+      font-size: 20px;
+      margin:-5px 0;
+    }
+    &field{
+      width: 400px;
+      margin-bottom: 1.5em;
+      gap: 1em;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+
+  .menu__item- {
+    &img {
+      width: 200px;
+      height: 112.5px;
+    }
+    &name{
+      font-size: 16px;
+      margin:-5px 0;
+    }
+    &field{
+      width: 95%;
+      margin-bottom: 1.5em;
+      gap: .5em;
+    }
   }
 }
