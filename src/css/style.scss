@@ -142,6 +142,15 @@ body {
     }
   }
 }
+.contact__{
+  &item{
+    width: 100%;
+  }
+  &logo{
+    height: 50px;
+    object-fit:scale-down;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .nav-bar__item {
@@ -176,6 +185,9 @@ body {
       margin-bottom: 1.5em;
       gap: 1em;
     }
+  }
+  .contact__logo{
+    height: 25px;
   }
 }
 @media only screen and (max-width: 400px) {
