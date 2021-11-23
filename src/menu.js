@@ -28,7 +28,7 @@ function buildTitle() {
 
 function buildMenuList() {
   const itemField = document.createElement("div");
-  itemField.classList = "flex-col menu__item-field";
+  itemField.classList = "flex-col";
   menuItems.forEach((item) => {
     itemField.appendChild(buildItem(item));
   });
@@ -36,9 +36,8 @@ function buildMenuList() {
 
   function buildItem(item) {
     const mainContainer = document.createElement("div");
-    mainContainer.classList = "flex-row";
+    mainContainer.classList = "flex-row menu__item-field";
     if (menuItems.indexOf(item) % 2 == 0) {
-      mainContainer.style.justifyContent = "left";
       mainContainer.appendChild(buildItemImage(item));
       mainContainer.appendChild(buildNameAndDescription(item));
     } else {

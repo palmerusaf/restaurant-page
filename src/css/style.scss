@@ -117,27 +117,29 @@ body {
   }
 }
 
-.menu{
-
-&__item-{
-  &field{
+.menu {
+  &__title {
+    margin-bottom: 0.7em;
   }
-  &img{
-width: 800px;
-height: 500px;
-object-fit: cover;
-border-radius: 15px;
-outline:goldenrod solid 2px;
-box-shadow: inset;
+  &__item- {
+    &field {
+      margin-bottom: 3em;
+      gap: 2em;
+    }
+    &img {
+      width: 500px;
+      height: 281.25px;
+      object-fit: cover;
+      border-radius: 15px;
+      outline: goldenrod solid 2px;
+      box-shadow: inset;
+    }
+    &name {
+      margin: -10px 0px;
+    }
+    &description {
+    }
   }
-  &name{
-
-  }
-  &description{
-    margin-top: 1em;
-margin-bottom: 2em;
-  }
-}
 }
 
 @media only screen and (max-width: 600px) {
@@ -154,14 +156,19 @@ margin-bottom: 2em;
   .location__address {
     font-size: 16px;
     text-shadow: none;
-    color: black
+    color: black;
   }
   .home__title-category {
     font-size: 25px;
   }
-
-  .menu__item-img{
-    width: 400px;
-    height: 250px;
+  .menu__item- {
+    &img {
+      width: 200px;
+      height: 112.5px;
+    }
+    &field{
+      margin-bottom: 1.5em;
+      gap: 1em;
+    }
   }
 }
