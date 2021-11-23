@@ -18,10 +18,11 @@
   padding: 0;
   list-style: none;
   font-family: sans-serif;
+  align-self: center;
 }
 
-body{
-    background-color: #fffeea;
+body {
+  background: url("../backgrounds/white-brick.jpg");
 }
 
 .flex-row {
@@ -45,16 +46,96 @@ body{
     cursor: pointer;
     &--active,
     &:hover {
-        transition: .1s;
-        transform: scale(1.4);
-        text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);    }
+      transition: 0.1s;
+      transform: scale(1.4);
+      text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+    }
   }
 }
 
-@media only screen and (max-width: 400px) {
-    .nav-bar__item{
-        font-size: 20px;
-        padding: 8px;
-        margin-right: 8px;
+.home__ {
+  &title {
+    font-family: "MainTitle";
+    font-size: 64px;
+    &--tree {
+      text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+      color: green;
     }
   }
+
+  &welcome-container {
+    margin-top: 16px;
+    padding: 16px 20px;
+    border: goldenrod solid;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    text-shadow: 2px 2px 2px black;
+    font-size: 32px;
+    text-align: center;
+    color: orange;
+  }
+
+  &welcome-msg {
+    font-family: "Descriptions";
+  }
+  &title-category {
+    font-family: "NavAndSmallTitle";
+    font-size: 40px;
+  }
+}
+
+.hour {
+  margin-bottom: 2em;
+  padding-top: 2em;
+  align-items: center;
+  &__title {
+    border: green solid;
+    border-radius: 15px;
+    padding: 0px 8px;
+    margin-bottom: 8px;
+  }
+  &__list {
+  }
+
+  &__list-item {
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: "Descriptions";
+    font-size: 25px;
+  }
+}
+
+.location {
+  border: orange solid;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  margin-left: 1em;
+  align-self: start;
+  &__address {
+    font-family: "Descriptions";
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar__item {
+    font-size: 20px;
+    padding: 8px;
+    margin-right: 8px;
+  }
+  .home__title {
+    font-size: 50px;
+  }
+  .home__welcome-container,
+  .hour__list-item,
+  .location__address {
+    font-size: 16px;
+    text-shadow: none;
+    color: black
+  }
+  .home__title-category {
+    font-size: 25px;
+  }
+}
