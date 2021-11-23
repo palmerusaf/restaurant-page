@@ -29,7 +29,7 @@ function buildWelcomeMsg() {
 
 function buildHourInfo() {
   const container = document.createElement("div");
-  container.classList = "hour";
+  container.classList = "flex-col hour";
   const title = buildCategoryTitle("Hours");
   title.classList.add("hour__title");
   container.appendChild(title);
