@@ -53,14 +53,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .nav-bar__item {
-    font-size: 20px;
-    padding: 8px;
-    margin-right: 8px;
-  }
-}
-
 .home__ {
   &title {
     font-family: "MainTitle";
@@ -95,7 +87,6 @@ body {
 
 .hour {
   margin-bottom: 2em;
-  text-align: start;
   padding-top: 2em;
   align-items: center;
   &__title {
@@ -124,6 +115,27 @@ body {
   align-self: start;
   &__address {
     font-family: "Descriptions";
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-bar__item {
+    font-size: 20px;
+    padding: 8px;
+    margin-right: 8px;
+  }
+  .home__title {
+    font-size: 50px;
+  }
+  .home__welcome-container,
+  .hour__list-item,
+  .location__address {
+    font-size: 16px;
+    text-shadow: none;
+    color: black
+  }
+  .home__title-category {
     font-size: 25px;
   }
 }
