@@ -119,6 +119,24 @@ body {
   }
 }
 
+.menu{
+
+&__item-{
+  &field{
+    
+  }
+  &img{
+
+  }
+  &name{
+
+  }
+  &description{
+
+  }
+}
+}
+
 @media only screen and (max-width: 600px) {
   .nav-bar__item {
     font-size: 20px;
