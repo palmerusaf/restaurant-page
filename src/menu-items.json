@@ -1,14 +1,58 @@
 [
   {
-    "name": "Chicken",
-    "img": "./chicken.jpg",
-    "altText": "pic of chicken",
-    "description": "walks on two legs etc..."
+    "name": "Bacon and Egg Sandwich",
+    "img": "./bacon-egg-sandwich.jpg",
+    "altText": "Bacon and Egg Sandwich",
+    "description": "Bacon and egg sandwich topped with chopped onions and eggs benedict."
   },
   {
-    "name": "Jelly Fish",
-    "img": "./jelly-fish.jpg",
-    "altText": "pic of jellyfish",
-    "description": "served with a side of peanuts and butter."
+    "name": "BBQ Pork",
+    "img": "./BBQ-with-pork.jpg",
+    "altText": "BBQ Pork",
+    "description": "BBQ pork and ramen served with a side of kimchi and miso soup."
+  },
+
+  {
+    "name": "Coconut Soup",
+    "img": "./coconut-soup.jpg",
+    "altText": "Coconut Soup",
+    "description": "Chicken, vegetable, and Thai herbs boiled in a coconut milk."
+  },
+
+  {
+    "name": "Seafood Curry",
+    "img": "./seafood-curry.jpg",
+    "altText": "Seafood Curry",
+    "description": "Seafood boiled in mixed coconut curry. Served inside a coconut."
+  },
+  {
+    "name": "Pan Fried Shrimp",
+    "img": "./shrimp.jpg",
+    "altText": "Pan Fried Shrimp",
+    "description": "BBQ shrimp pan-fried in Thai herbs"
+  },
+  {
+    "name": "Spaghetti with Bacon and Egg",
+    "img": "./spaghetti-bacon-egg.jpg",
+    "altText": "Spaghetti with Bacon and Egg",
+    "description": "Bacon and spaghetti served in a creamy alfredo sauce. Topped with a salted egg."
+  },
+  {
+    "name": "Pancakes with Scrambled Eggs",
+    "img": "./pancake-egg.jpg",
+    "altText": "Pancakes with Scrambled Eggs",
+    "description": "Pancakes topped with bananas and whipped cream. Served with a side of scrambled eggs."
+  },
+  {
+    "name": "Bubble Waffle with Icecream",
+    "img": "./waffle.jpg",
+    "altText": "Bubble Waffle with Icecream",
+    "description": "Fried crispy waffle filled with whipped cream, strawberries, and blueberries. Served with a side of icecream."
+  },
+  {
+    "name": "Mixed Berry Cake",
+    "img": "./cake.jpg",
+    "altText": "Mixed Berry Cake",
+    "description": "Vanilla pound cake topped with shipped cream and mixed berries."
   }
 ]
