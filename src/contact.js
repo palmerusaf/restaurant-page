@@ -14,7 +14,7 @@ function contactInfoBuilder() {
 
   function titleBuilder() {
     const title = document.createElement("h1");
-    title.classList = "contact__title";
+    title.classList = "home__title contact__title";
     title.textContent = "Contact Us";
     return title;
   }
@@ -43,7 +43,7 @@ function contactInfoBuilder() {
 
     function contactBuilder(logoSource, content, link) {
       const contact = document.createElement("li");
-      contact.classList = "flex-row contact__item";
+      contact.classList = "flex-row home__title-category contact__item";
 
       if (logoSource) contact.appendChild(logoBuilder(logoSource));
       link
