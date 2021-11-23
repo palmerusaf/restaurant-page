@@ -65,6 +65,10 @@ body {
   &title {
     font-family: "MainTitle";
     font-size: 64px;
+    &--tree {
+      text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+      color: green;
+    }
   }
 
   &welcome-container {

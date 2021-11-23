@@ -8,7 +8,11 @@ const attachToContainer = function (container) {
 function buildTitle() {
   const title = document.createElement("h1");
   title.classList = "home__title";
-  title.textContent = "Home Title";
+  title.textContent = "Café Under the";
+  const span = document.createElement("span");
+  span.classList = "home__title home__title--tree";
+  span.textContent = "Tree";
+  title.appendChild(span);
   return title;
 }
 
