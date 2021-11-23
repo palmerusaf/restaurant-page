@@ -123,6 +123,7 @@ body {
   }
   &__item- {
     &field {
+      width: 800px;
       margin-bottom: 3em;
       gap: 2em;
     }
@@ -166,7 +167,12 @@ body {
       width: 200px;
       height: 112.5px;
     }
+    &name{
+      font-size: 20px;
+      margin:-5px 0;
+    }
     &field{
+      width: 400px;
       margin-bottom: 1.5em;
       gap: 1em;
     }
