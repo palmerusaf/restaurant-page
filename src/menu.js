@@ -53,7 +53,7 @@ function buildMenuList() {
 
   function buildItemDescription(item) {
     const itemDescription = document.createElement("div");
-    itemDescription.classList = "menu__item-description";
+    itemDescription.classList = "menu__item-description location__address";
     itemDescription.textContent = item.description;
     return itemDescription;
   }
