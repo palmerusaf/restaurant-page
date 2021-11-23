@@ -11,7 +11,7 @@ import * as contactContent from "./contact";
     const container = document.createElement("div");
     container.classList = "flex-col";
     container.id = "content";
-    menuContent.attachToContainer(container)
+    homeContent.attachToContainer(container)
     return container;
   }
 
