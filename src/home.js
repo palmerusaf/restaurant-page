@@ -22,7 +22,7 @@ function buildWelcomeMsg() {
   const message = document.createElement("p");
   message.classList = "home__welcome-msg";
   message.textContent =
-    "Welcome our website. We specialize in Thai-fusion. Also, visit us and treat yourself to one of our specialty coffee infused drinks. We look forward to seeing you. Check out our menu above and feel free to contact us.";
+    "Welcome our website. We specialize in Thai-fusion. Visit us and treat yourself to one of our desserts. We look forward to seeing you. Check out our menu above and feel free to contact us.";
   container.appendChild(message);
   return container;
 }

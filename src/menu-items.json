@@ -16,7 +16,7 @@
     "name": "Coconut Soup",
     "img": "./coconut-soup.jpg",
     "altText": "Coconut Soup",
-    "description": "Chicken, vegetable, and Thai herbs boiled in a coconut milk."
+    "description": "Chicken, vegetable, and Thai herbs boiled in coconut milk."
   },
 
   {
@@ -53,6 +53,6 @@
     "name": "Mixed Berry Cake",
     "img": "./cake.jpg",
     "altText": "Mixed Berry Cake",
-    "description": "Vanilla pound cake topped with shipped cream and mixed berries."
+    "description": "Vanilla pound cake topped with whipped cream and mixed berries."
   }
 ]

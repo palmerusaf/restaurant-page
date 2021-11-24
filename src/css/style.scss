@@ -142,13 +142,13 @@ body {
     }
   }
 }
-.contact__{
-  &item{
+.contact__ {
+  &item {
     width: 100%;
   }
-  &logo{
+  &logo {
     height: 50px;
-    object-fit:scale-down;
+    object-fit: scale-down;
   }
 }
 
@@ -176,35 +176,39 @@ body {
       width: 200px;
       height: 112.5px;
     }
-    &name{
+    &name {
       font-size: 20px;
-      margin:-5px 0;
+      margin: -5px 0;
     }
-    &field{
+    &field {
       width: 400px;
       margin-bottom: 1.5em;
       gap: 1em;
     }
   }
-  .contact__logo{
-    height: 25px;
+  .contact__ {
+    &logo {
+      height: 25px;
+    }
+    &item{
+      font-size: 20px;
+    }
   }
 }
 @media only screen and (max-width: 400px) {
-
   .menu__item- {
     &img {
       width: 200px;
       height: 112.5px;
     }
-    &name{
+    &name {
       font-size: 16px;
-      margin:-5px 0;
+      margin: -5px 0;
     }
-    &field{
+    &field {
       width: 95%;
       margin-bottom: 1.5em;
-      gap: .5em;
+      gap: 0.5em;
     }
   }
 }
