@@ -1,4 +1,4 @@
-import * as menuItems from "./menu-items.json";
+import menuItems from "./menu-items.json";
 
 // Load all imgs from img folder so json file can use imgs dynamically
 let imgCache = {};
